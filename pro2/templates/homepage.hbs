@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--CSS taken from smartdraw.com-->
+	<link rel="stylesheet" type="text/css" href="https://wcs.smartdraw.com/common/css/style.min.css?bn=15100111868">
+	<style>
+		.header{
+			
+			font-size: 30px;
+			color: white;
+			background-color: #ffc107;
+			text-align: center;
+			padding-bottom: 170px;
+			padding-top: 150px;
+			background-image: url("/images/orangeback.jpg");
+			background-size: cover;
+		}
+		.head{
+			background-color: gray;
+		}
+		.hub-nav-tileRow {
+		    display: flex;
+		    justify-content: space-between;
+		    width: 100%;
+		    padding-bottom: 40px;
+		}
+		.siteNavContainer{
+			position: static;
+		}
+		.hub-nav-tile {
+		    background: white;
+		    position: relative;
+		    display: flex;
+		    flex-direction: column;
+		    flex: 1 1 auto;
+		    width: 0;
+		    margin-right: 50px;
+		    padding: 40px;
+		    border-bottom: 20px solid gray;
+		    border-radius: 12px;
+		    box-shadow: 0 6px 24px rgb(0 0 0 / 18%);
+		    box-sizing: border-box; 
+		    overflow: hidden;
+		}
+		.grid {
+			padding-top: 3rem;
+		}
+		.button-54 { 
+			font-family: "Open Sans", sans-serif;
+		 	font-size: 16px; 
+		 	letter-spacing: 2px;
+		 	text-decoration: none; 
+		 	text-transform: uppercase; 
+		 	color: #000; 
+		 	cursor: pointer; 
+		 	border: 3px solid; 
+		 	padding: 0.25em 0.5em; 
+		 	box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px; 
+		 	position: relative; 
+		 	user-select: none; 
+		 	-webkit-user-select: none; 
+		 	touch-action: manipulation; 
+		 }
+
+		 .button-54:active { 
+		 	box-shadow: 0px 0px 0px 0px; 
+		 	top: 5px; 
+		 	left: 5px; } @media (min-width: 768px) { .button-54 { padding: 0.25em 0.75em; } }
+
+		 .navList li {
+		    padding: 0 10px;
+		    cursor: pointer;
+		}
+		.select-room{
+			margin-left: 150px;
+			padding-top: 3rem;
+
+		}
+		.sports {
+			background-image: url("/images/sportschat.png");
+			background-size: cover;
+		}
+		.music{
+			background-image: url("/images/music and dance.jpg");
+			background-size: cover;
+		}
+		.art{
+			background-image: url("/images/arts.jpg");
+			background-size: cover;
+		}
+		.education{
+			background-image: url("/images/education2.jpg");
+			background-size: cover;
+			background-position-y: center;
+		}
+		.food{
+			background-image: url("/images/food and baverages.jpg");
+			background-size: cover;
+		}
+		.other{
+			background-image: url("/images/otherthings.jpg");
+			background-size: cover;
+			background-position-y: center;
+		}
+		.footer{
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: gray;
+			color: white;
+			text-align: center;
+			padding-top: 10px;
+		}
+
+	</style>
+	<title>UniChat</title>
+</head>
+<body>
+	<div class="siteNavContainer" id="siteNavContainer" role="navigation">
+		<div class="wrapper">
+		<div class="grid" style="padding-top: 0px; padding-bottom: 0px;">
+			<div class="nav">
+				<a class="navBarLogo">
+					<img src="/images/chatLogo.png" style="width: 80px">					
+				</a>
+				<a  class="navBarLogo">
+					<img src="/images/chatname.png" style="margin-top: 20px; width: 200px; height: 30px;">
+				</a>
+				<ul class="navList" style="min-height: 65px;">
+					<li class="list"><a href="/home">Home</a></li>
+					<li class="list"><a href="/help">Help</a></li>
+					<li class="list"><a href="/about">About us</a></li>
+					<li class="list"><a href="/logout" class="btn btn22 btn-gold" id="siteNav-navButton">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="head">
+	<div class="header">
+		<h1 class="displayHeader" style="text-transform: uppercase; font-size: 10rem; font-family: georgia; ">WELCOME, {{ name }}</h1>
+	</div>
+	</div>
+	<div class="select-room">
+		<h3 class="displayHeader">SELECT ROOM:</h3>
+	</div>
+	<div class="wrapper">
+		<div class="grid grid--medium">
+			<div>
+			<div class="hub-nav-tileRow">
+				<div class="hub-nav-tile sports">
+					<h3 class="displayHeader" style="color: white;">SPORTS</h3>
+					<form action="/joinRoom">
+						<button type="submit" name="room" value="SPORTS" class="button-54">JOIN</button>
+					</form>
+				</div>
+				<div class="hub-nav-tile music">
+					<h3 class="displayHeader" style="color: white;"> MUSIC & DANCE</h3>
+					<form action="/joinRoom" >
+						<input type="hidden" name="userEmail" value="">
+						<button type="submit" name="room" value="MUSIC" class="button-54">JOIN</button>
+					</form>
+				</div>
+				<div class="hub-nav-tile art">
+					<h3 class="displayHeader" style="color: white;"> ARTS</h3>
+					<form action="/joinRoom" >
+						<button type="submit" name="room" value="ARTS" class="button-54">JOIN</button>
+					</form>
+				</div>
+			</div>
+			<div class="hub-nav-tileRow">
+				<div class="hub-nav-tile education">
+					<h3 class="displayHeader" style="color: white;">EDUCATION</h3> 
+					<form action="/joinRoom">
+						<button type="submit" name="room" value="EDUCATION" class="button-54">JOIN</button>
+					</form>
+				</div>
+				<div class="hub-nav-tile food">
+					<h3 class="displayHeader" style="color: white;">FOOD & DRINKS</h3>
+					<form action="/joinRoom" >
+						<button type="submit" name="room" value="FOOD" class="button-54">JOIN</button>
+					</form>
+				</div>
+				<div class="hub-nav-tile other">
+					<h3 class="displayHeader">OTHER</h3>
+					<form action="/joinRoom" >
+						<button type="submit" name="room" value="OTHER" class="button-54">JOIN</button>
+					</form>
+				</div> 
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>© 2023 UniChat, Inc.</p>
+	</div>
+</body>
+</html>
